@@ -1,0 +1,10 @@
+{
+  "name": "Abhiram SRE Portfolio",
+  "short_name": "AbhiramSRE",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdfaf5",
+  "theme_color": "#0f2a3f",
+  "description": "SRE portfolio and articles by Abhiram.",
+  "icons": []
+}

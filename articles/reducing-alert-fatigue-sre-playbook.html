@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reducing Alert Fatigue: An SRE Playbook | Abhiram</title>
+  <meta name="description" content="An SRE playbook for reducing alert fatigue through severity design, deduplication, and actionable on-call signals." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://your-domain.com/articles/reducing-alert-fatigue-sre-playbook.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Reducing Alert Fatigue: An SRE Playbook" />
+  <meta property="og:description" content="Make alerts actionable and reduce noise in on-call workflows." />
+  <meta property="og:url" content="https://your-domain.com/articles/reducing-alert-fatigue-sre-playbook.html" />
+  <meta property="og:image" content="https://your-domain.com/assets/og-cover.svg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Reducing Alert Fatigue: An SRE Playbook" />
+  <meta name="twitter:description" content="Make alerts actionable and reduce noise in on-call workflows." />
+  <meta name="twitter:image" content="https://your-domain.com/assets/og-cover.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Reducing Alert Fatigue: An SRE Playbook",
+    "description": "An SRE playbook for reducing alert fatigue through actionable signal design.",
+    "datePublished": "2026-04-22",
+    "dateModified": "2026-04-22",
+    "author": {
+      "@type": "Person",
+      "name": "Abhiram"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Abhiram"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://your-domain.com/articles/reducing-alert-fatigue-sre-playbook.html"
+    },
+    "image": "https://your-domain.com/assets/og-cover.svg"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/">Abhiram<span>.SRE</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/articles/">Articles</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="article-shell">
+    <article>
+      <h1>Reducing Alert Fatigue: An SRE Playbook</h1>
+      <p><em>Published: April 22, 2026</em></p>
+      <p>Alert fatigue is usually a design issue, not an on-call issue. Better signal engineering can remove most false urgency.</p>
+
+      <h2>1. Define Severity With User Impact</h2>
+      <p>Severity must map to customer impact and recovery urgency. If this mapping is vague, paging rules become noise.</p>
+
+      <h2>2. Remove Duplicate Paths</h2>
+      <p>Multiple systems often detect the same failure. Group and deduplicate by incident fingerprint so one issue triggers one coordinated response.</p>
+
+      <h2>3. Alert on Symptoms First</h2>
+      <p>Page on symptoms users feel (latency, error budget burn) before paging on low-level component metrics.</p>
+
+      <h2>4. Track Alert Quality Metrics</h2>
+      <p>Measure actionability rate, false positive rate, and mean time to acknowledge. These metrics drive weekly tuning improvements.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Abhiram. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>

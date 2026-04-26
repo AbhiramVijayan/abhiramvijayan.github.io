@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Abhiram SRE Articles</title>
+    <link>https://your-domain.com/articles/</link>
+    <description>Reliability engineering articles and notes by Abhiram.</description>
+    <language>en-us</language>
+
+    <item>
+      <title>How I Run Incident Retrospectives Without Blame</title>
+      <link>https://your-domain.com/articles/how-i-run-incident-retrospectives.html</link>
+      <guid>https://your-domain.com/articles/how-i-run-incident-retrospectives.html</guid>
+      <pubDate>Mon, 20 Apr 2026 10:00:00 GMT</pubDate>
+      <description>A practical SRE guide to retrospectives that create durable reliability improvements.</description>
+    </item>
+
+    <item>
+      <title>Reducing Alert Fatigue: An SRE Playbook</title>
+      <link>https://your-domain.com/articles/reducing-alert-fatigue-sre-playbook.html</link>
+      <guid>https://your-domain.com/articles/reducing-alert-fatigue-sre-playbook.html</guid>
+      <pubDate>Wed, 22 Apr 2026 10:00:00 GMT</pubDate>
+      <description>An SRE playbook for reducing alert fatigue through actionable signal design.</description>
+    </item>
+  </channel>
+</rss>

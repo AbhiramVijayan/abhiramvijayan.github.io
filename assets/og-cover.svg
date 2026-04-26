@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Abhiram SRE Portfolio</title>
+  <desc id="desc">Open Graph image for Abhiram SRE portfolio website.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f2a3f" />
+      <stop offset="100%" stop-color="#0c8b8b" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="150" cy="120" r="180" fill="#ef6c2f" opacity="0.18" />
+  <circle cx="1080" cy="560" r="220" fill="#ffe9ca" opacity="0.22" />
+  <text x="80" y="290" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="72" font-weight="700">Abhiram</text>
+  <text x="80" y="368" fill="#ffe9ca" font-family="Segoe UI, sans-serif" font-size="48" font-weight="600">Site Reliability Engineer</text>
+  <text x="80" y="430" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="30">Experience • Certifications • Articles</text>
+</svg>
