@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/Abhiram_image.png" />
+  <link rel="shortcut icon" href="/assets/Abhiram_image.png" />
+  <title>Azure Kubernetes Fleet Manager: Managing AKS at Scale | Abhiram</title>
+  <meta name="description" content="How I used Azure Kubernetes Fleet Manager to manage 18 AKS clusters with safe upgrades, centralized observability, and better control." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://abhiramvijayan.github.io/articles/azure-kubernetes-fleet-manager.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Azure Kubernetes Fleet Manager: Managing AKS at Scale" />
+  <meta property="og:description" content="How I used Azure Kubernetes Fleet Manager to manage 18 AKS clusters with safe upgrades and centralized observability." />
+  <meta property="og:url" content="https://abhiramvijayan.github.io/articles/azure-kubernetes-fleet-manager.html" />
+  <meta property="og:image" content="https://abhiramvijayan.github.io/assets/Abhiram_image.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Azure Kubernetes Fleet Manager: Managing AKS at Scale" />
+  <meta name="twitter:description" content="Managing multiple AKS clusters? Here's how Fleet Manager simplifies upgrades and observability." />
+  <meta name="twitter:image" content="https://abhiramvijayan.github.io/assets/Abhiram_image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Azure Kubernetes Fleet Manager: Managing AKS at Scale",
+    "description": "How I used Azure Kubernetes Fleet Manager to manage 18 AKS clusters with safe upgrades and centralized observability.",
+    "datePublished": "2026-04-26",
+    "dateModified": "2026-04-26",
+    "author": {
+      "@type": "Person",
+      "name": "Abhiram Vijayan"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Abhiram Vijayan"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://abhiramvijayan.github.io/articles/azure-kubernetes-fleet-manager.html"
+    },
+    "image": "https://abhiramvijayan.github.io/assets/Abhiram_image.png"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/">Abhiram <span>Vijayan</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/articles/">Articles</a>
+        <a href="/cv.html">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="article-shell">
+    <article>
+      <h2>Azure Kubernetes Fleet Manager: Managing AKS at Scale</h2>
+      <p><em>Published: April 26, 2026</em></p>
+
+      <p>
+        Managing multiple AKS clusters across different regions and subscriptions can quickly become chaotic. 
+        Version upgrades, OS patching, and lack of centralized visibility often turn into operational pain points.
+        In our case, handling 18 clusters made this even more challenging — until we adopted Azure Kubernetes Fleet Manager.
+      </p>
+
+      <h3>1. What is Azure Kubernetes Fleet Manager?</h3>
+      <p>
+        Azure Kubernetes Fleet Manager enables at-scale management of multiple Kubernetes clusters. 
+        It provides a centralized control plane to monitor, govern, and safely operate your entire AKS estate. 
+        Think of it as a control plane above your control planes — a single hub to manage everything in one place.
+      </p>
+
+      <h3>2. Orchestrated Upgrades Without the Risk</h3>
+      <p>
+        One of the biggest challenges we faced was coordinating Kubernetes version upgrades and OS patching 
+        across all clusters. Fleet Manager solved this by allowing us to group clusters, define rollout order, 
+        and introduce manual approval gates.
+        <br><br>
+        This means upgrades are no longer an all-or-nothing gamble. We can safely roll out changes in phases, 
+        minimizing risk to production workloads. This is the feature we rely on the most.
+      </p>
+
+      <h3>3. Centralized Observability</h3>
+      <p>
+        Fleet Manager provides a single pane of glass to monitor cluster health, resource placement, 
+        and operational status. Instead of jumping between multiple clusters and dashboards, 
+        we now have a unified view of our entire Kubernetes fleet.
+      </p>
+
+      <h3>4. Handling Terraform Version Drift</h3>
+      <p>
+        One subtle but critical issue we encountered was Terraform conflicting with Fleet Manager 
+        during version upgrades. Terraform would attempt to revert versions managed by Fleet Manager.
+        <br><br>
+        The fix was simple but important:
+      </p>
+
+      <pre><code>lifecycle {
+  ignore_changes = [
+    kubernetes_version,
+  ]
+}</code></pre>
+
+      <p>
+        This ensures Terraform doesn't interfere with Fleet Manager’s upgrade strategy, 
+        allowing both tools to coexist without conflict.
+      </p>
+
+      <h3>Conclusion</h3>
+      <p>
+        Azure Kubernetes Fleet Manager significantly improved how we manage our AKS infrastructure. 
+        From safer upgrades to better visibility and control, it brought structure to what was previously 
+        a complex and error-prone process.
+        <br><br>
+        I’ve also shared feedback with the Azure team based on real-world usage — small improvements that 
+        could make this tool even more powerful for teams operating at scale.
+      </p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Abhiram. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>
