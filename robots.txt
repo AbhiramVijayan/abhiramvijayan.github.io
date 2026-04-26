@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://abhiramvijayan.github.io/sitemap.xml
+Sitemap: https://abhiramvijayan.com/sitemap.xml
