@@ -14,12 +14,13 @@
   <meta property="og:title" content="Azure Kubernetes Fleet Manager: Managing AKS at Scale" />
   <meta property="og:description" content="How I used Azure Kubernetes Fleet Manager to manage 18 AKS clusters with safe upgrades and centralized observability." />
   <meta property="og:url" content="https://abhiramvijayan.github.io/articles/azure-kubernetes-fleet-manager.html" />
-  <meta property="og:image" content="https://abhiramvijayan.github.io/assets/Abhiram_image.png" />
+  <meta property="og:image" content="https://abhiramvijayan.github.io/assets/aks-fleet.png" />
+  <meta property="og:image:alt" content="Azure Kubernetes Fleet Manager view across AKS clusters" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Azure Kubernetes Fleet Manager: Managing AKS at Scale" />
   <meta name="twitter:description" content="Managing multiple AKS clusters? Here's how Fleet Manager simplifies upgrades and observability." />
-  <meta name="twitter:image" content="https://abhiramvijayan.github.io/assets/Abhiram_image.png" />
+  <meta name="twitter:image" content="https://abhiramvijayan.github.io/assets/aks-fleet.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -46,7 +47,7 @@
       "@type": "WebPage",
       "@id": "https://abhiramvijayan.github.io/articles/azure-kubernetes-fleet-manager.html"
     },
-    "image": "https://abhiramvijayan.github.io/assets/Abhiram_image.png"
+    "image": "https://abhiramvijayan.github.io/assets/aks-fleet.png"
   }
   </script>
 </head>
@@ -97,6 +98,10 @@
         we now have a unified view of our entire Kubernetes fleet.
       </p>
 
+      <figure>
+        <img src="/assets/aks-fleet.png" alt="Azure Kubernetes Fleet Manager across AKS clusters" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(11,27,43,0.12);" />
+      </figure>
+
       <h3>4. Handling Terraform Version Drift</h3>
       <p>
         One subtle but critical issue we encountered was Terraform conflicting with Fleet Manager 
@@ -123,7 +128,8 @@
         a complex and error-prone process.
         <br><br>
         I’ve also shared feedback with the Azure team based on real-world usage — small improvements that 
-        could make this tool even more powerful for teams operating at scale.
+        could make this tool even more powerful for teams operating at scale. See feedback thread: 
+        <a href="https://github.com/Azure/AKS/issues/5655" target="_blank" rel="noopener noreferrer">github.com/Azure/AKS/issues/5655</a>.
       </p>
     </article>
   </main>
